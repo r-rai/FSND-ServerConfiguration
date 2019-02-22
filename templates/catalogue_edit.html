@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2> Edit Catalogue </h2>
+<form action="{{ url_for('editCatalogue',catalogue_id = catalogue.id)}}" method='post'>
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{catalogue.name }}'>
+<input type='submit' value='Edit'>
+</form>
+<a href="{{url_for('showItem', catalogue_id = catalogue.id)}}">
+     <button>Items</button>
+ </a>
+<a href="/catalogue"><button> Cancel </button></a>
+{% endblock %}

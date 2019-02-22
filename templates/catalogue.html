@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2> Categories </h2>
+{% if catalogues != [] %}
+    <a href="{{url_for('newCatalogue')}}" >
+        <button>Create a New Catalogue</button>
+    </a>
+    {% for catalogue in catalogues %}
+        <h3>{{catalogue.name}}</h3>
+        <a href="{{url_for('showItem', catalogue_id = catalogue.id)}}">
+             <button>Items</button>
+         </a>
+         <a href="{{url_for('editCatalogue',catalogue_id = catalogue.id)}}">
+             <button>Edit</button>
+         </a>
+        <a href="{{url_for('deleteCatalogue',catalogue_id = catalogue.id)}}">
+            <button>Delete</button>
+        </a>
+    {% endfor %}
+{% else %}
+    <p> There are no categories at the moment... <p>
+    <a href="{{url_for('newCatalogue')}}" >
+        <button>Create a New Catalogue</button>
+    </a>
+{% endif %}
+{% endblock %}

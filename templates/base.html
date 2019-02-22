@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <title>Udacity: Item Catalog</title>
+</head>
+<body>
+	<body style="background-image:url(/static/bg.jpg)">
+  <a href="/catalogue" class="main-title"><h1>Udacity: Item Catalog</h1></a>
+    ---<a href="{{url_for('showLogin')}}">
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>Login Here
+		</a> | <a href="/gdisconnect">Logout</a>---
+
+	{% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+      <ul>
+      {% for message in messages %}
+          <li> <strong> {{ message }} </strong> </li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+  {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
