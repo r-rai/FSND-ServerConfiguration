@@ -5,15 +5,15 @@ You can access this application at : http://ravirai.in/
 IP: 13.234.108.91
 SSH port: 2200
 
-#Requirements:
-apache2
-python 2.7
-flask
-sqlalchemy
-wsgi
-virtualenv
-oath2client
-requests
+#Requirements:  
+apache2  
+python 2.7  
+flask  
+sqlalchemy  
+wsgi  
+virtualenv  
+oath2client  
+requests  
 
 
 #User Management
@@ -53,3 +53,12 @@ requests
 |CRITERIA | MEETS SPECIFICATIONS|
 |----------|---------------------|
 |Is a README file included in the GitHub repo containing all specified information?|A README file is included in the GitHub repo containing the following information: IP address, URL, summary of software installed, summary of configurations made, and a list of third-party resources used to complete this project.|
+
+
+# References
+
+https://vishnut.me/blog/ec2-flask-apache-setup.html  
+https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2  
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database  
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps  
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04  
