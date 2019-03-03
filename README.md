@@ -2,6 +2,18 @@
 Project Name : Linux Server Configuration
 
 You can access this application at : http://ravirai.in/
+IP: 13.234.108.91
+SSH port: 2200
+
+#Requirements:
+apache2
+python 2.7
+flask
+sqlalchemy
+wsgi
+virtualenv
+oath2client
+requests
 
 
 #User Management
